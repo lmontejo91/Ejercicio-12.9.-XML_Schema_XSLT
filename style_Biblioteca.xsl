@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -16,6 +16,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <th>Precio</th>
           <th>Estantería</th>
         </tr>
+        <xsl:for-each select="biblioteca/libro">
             <xsl:sort select="anio_publicacion"/>
             <tr>
                 <td><xsl:value-of select="isbn"/></td>
@@ -25,6 +26,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <td><xsl:value-of select="precio"/></td>
                 <td><xsl:value-of select="estanteria"/></td>
             </tr>
+        </xsl:for-each>
     </table>
 
     <!-- TABLA CON TODOS LOS LIBROS EN INGLÉS (Ordenados por año de publicación) -->
@@ -35,6 +37,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <th>Autor</th>
           <th>Año de Publicación</th>
         </tr>
+        <xsl:for-each select="biblioteca/libro">
             <xsl:sort select="anio_publicacion"/>
             <xsl:if match="libro[@lang='en']">
             <tr>
@@ -44,10 +47,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <td><xsl:value-of select="anio_publicacion"/></td>
             </tr>
             </xsl:if>
+        </xsl:for-each>
     </table>
 
      <!-- LISTA DE SOCIOS -->
     <ul>
+        <xsl:for-each select="biblioteca/socio">
             <li>
                 <xsl:choose>
                     <xsl:when test="biblioteca/socio/suscripcion/afiliadoVIP">
@@ -82,6 +87,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 </xsl:choose>
                 
             </li>
+        </xsl:for-each>
     </ul>
 
   </body>
