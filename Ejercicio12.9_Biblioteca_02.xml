@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="style_Biblioteca.xsl"?>
+<?xml-stylesheet type="text/xsl" href="styleXSLT_Biblioteca.xsl"?>
 <biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
 
@@ -84,6 +84,17 @@ xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
         </suscripcion>
     </socio>
 
+    <socio permisos="total">
+        <id_socio>BEN_1234</id_socio>
+        <nombre>Victor</nombre>
+        <apellido1>Pérez</apellido1>
+        <edad>67</edad>
+        <telefono cod_pais="+34">603148622</telefono>
+        <suscripcion>
+            <afiliadoVIP/>
+        </suscripcion>
+    </socio>
+
     <socio permisos="moroso">
         <id_socio>GAS_1234</id_socio>
         <nombre>Gastón</nombre>
@@ -98,13 +109,15 @@ xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
     </socio>
 
     <socio permisos="total">
-        <id_socio>BEN_1234</id_socio>
-        <nombre>Victor</nombre>
-        <apellido1>Pérez</apellido1>
-        <edad>67</edad>
-        <telefono cod_pais="+34">603148622</telefono>
+        <id_socio>MAR_2345</id_socio>
+        <nombre>Maria Esther</nombre>
+        <apellido1>Valdivielso</apellido1>
+        <apellido2>Martín</apellido2>
+        <edad>48</edad>
+        <telefono cod_pais="+34">698522124</telefono>
+        <email>mari48@hotmail.com</email>
         <suscripcion>
-            <afiliadoVIP/>
+            <empleado/>
         </suscripcion>
     </socio>
 
@@ -141,19 +154,6 @@ xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
         <edad>73</edad>
         <suscripcion>
             <afiliado/>
-        </suscripcion>
-    </socio>
-
-    <socio permisos="total">
-        <id_socio>MAR_2345</id_socio>
-        <nombre>Maria Esther</nombre>
-        <apellido1>Valdivielso</apellido1>
-        <apellido2>Martín</apellido2>
-        <edad>48</edad>
-        <telefono cod_pais="+34">698522124</telefono>
-        <email>mari48@hotmail.com</email>
-        <suscripcion>
-            <empleado/>
         </suscripcion>
     </socio> 
 

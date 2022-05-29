@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="style_Biblioteca.xsl"?>
+<?xml-stylesheet type="text/xsl" href="styleXSLT_Biblioteca.xsl"?>
 <biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
 
@@ -46,7 +46,7 @@ xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
         <autor>Aldous Huxley</autor>
         <anio_publicacion>1932-01-07</anio_publicacion>
         <precio>29.99</precio>
-        <estanteria>FAN1234**</estanteria>
+        <estanteria>FIC1234**</estanteria>
     </libro>
 
     <libro lang="es" estado="libre" cover="paperback">

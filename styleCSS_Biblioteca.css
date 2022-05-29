@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    font-size: 108%;
+}
+
+/* ESTILO DE LOS TÍTULOS */
+h2{
+    text-align: center;
+    padding-top: 2%;
+    font-size: 170%;
+    color: rgb(84, 32, 255);
+}
+
+
+/* ESTILO DE LAS TABLAS DE LIBROS */
+
+/* Ambas tienen el mismo estilo, variando la anchura entre una y otra. */
+table:first-of-type{
+    width: 85%;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    width: 60%;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 0.5%;
+}
+
+th{
+    color: azure;
+    font-weight: bolder;
+}
+
+table tr:first-of-type{
+    background-color: rgb(186, 132, 237);
+}
+
+
+/* ESTILO LISTA DE SOCIOS */
+
+/* He dado un estilo básico a la lista cambiando el tamaño de la letra, los bordes y colores.
+Los socios aparecerán en distinto color dependiendo del tipo de socio (normal, vip o empleado). */
+ol{
+    width: 40%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1.5px solid rgb(84, 32, 255);
+}
+
+ol>li::marker{
+    color: rgb(84, 32, 255);
+    font-weight: bolder;
+}
+
+ol>li{
+    background-color: rgba(84, 32, 255, 0.316);
+    padding: 2% 0 0;
+    font-size: xx-large;
+    font-weight: 600;
+    border-left: 1.5px solid rgb(84, 32, 255);
+}
+
+ol ul{
+    padding: 3% 5% 3%;
+    font-size: 85%;
+    font-weight: normal;
+}
+
+#afiliado{
+    background-color: rgb(255, 255, 255);
+}
+
+#afiliadoVIP{
+    background-color:rgb(135, 207, 235);
+}
+
+#empleado{
+    background-color:rgb(255, 182, 193);
+}
