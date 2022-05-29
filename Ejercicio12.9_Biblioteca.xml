@@ -4,13 +4,13 @@ xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
     <libro lang="es" estado="libre" cover="hardcover">
         <isbn>8478886540</isbn>
         <titulo>Harry Potter y la piedra filosofal</titulo>
-        <autor>J K. Rowling</autor>
+        <autor>J. K. Rowling</autor>
         <anio_publicacion>1997-06-26</anio_publicacion>
         <precio>29.99</precio>
         <estanteria>FAN1234**</estanteria>
     </libro>
     
-    <libro estado="libre" cover="paperback">
+    <libro lang="en" estado="libre" cover="paperback">
         <isbn>1501110365</isbn>
         <titulo>It Ends with Us</titulo>
         <autor>Colleen Hoover</autor>

@@ -4,30 +4,55 @@
 <xs:element name="biblioteca">
     <xs:complexType>
         <xs:sequence>
-            <xs:element name="libro" minOccurs="5" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="isbn" type="xs:integer"/>
-                        <xs:element name="titulo" type="xs:string"/>
-                        <xs:element name="autor" type="xs:string"/>
-                        <xs:element name="anio_publicacion" type="xs:date"/>
-                        <xs:element name="precio" type="xs:decimal"/>
-                        <xs:element name="estanteria" type="xs:string"/>
-                    </xs:sequence>
-                    <xs:attribute name="lang" type="xs:string" use="required"/>
-                    <xs:attribute name="estado" type="xs:string" use="required"/>
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:enumeration value="prestado"/>
-                                <xs:enumeration value="libre"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    <xs:attribute name="cover" type="xs:string"/>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="libro" minOccurs="5" maxOccurs="unbounded" type="estructura_libro"/>
         </xs:sequence>
     </xs:complexType>
 </xs:element>
 
+<xs:complexType name="estructura_libro">
+    <xs:sequence>
+        <xs:element name="isbn" type="tipo_isbn"/>
+        <xs:element name="titulo" type="xs:string"/>
+        <xs:element name="autor" type="tipo_autor"/>
+        <xs:element name="anio_publicacion" type="xs:date"/>
+        <xs:element name="precio" type="tipo_precio"/>
+        <xs:element name="estanteria" type="tipo_estanteria"/>
+    </xs:sequence>
+    <xs:attribute name="lang" type="xs:string" use="required"/>
+    <xs:attribute name="estado" use="required">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="prestado"/>
+                <xs:enumeration value="libre"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="cover" type="xs:string"/>  
+</xs:complexType>
+
+<xs:simpleType name="tipo_isbn">
+    <xs:restriction base="xs:integer">
+        <xs:pattern value="[0-9]{10}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipo_autor">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Za-zÀ-ÿ\.]+(\s[A-Za-zÀ-ÿ\.]+)*"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipo_precio">
+    <xs:restriction base="xs:decimal">
+        <xs:maxInclusive value="100"/>
+        <xs:fractionDigits value="2"/> <!-- Limita el número de decimales que se pueden poner a dos. -->
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipo_estanteria">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="HIS|ROM|FIC|FAN|CLA|MIS[0-9]{4}"/>
+    </xs:restriction>
+</xs:simpleType>
 
 </xs:schema>
