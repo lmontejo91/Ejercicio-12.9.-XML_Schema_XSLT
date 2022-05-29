@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="biblioteca">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="libro" minOccurs="5" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="isbn" type="xs:integer"/>
+                        <xs:element name="titulo" type="xs:string"/>
+                        <xs:element name="autor" type="xs:string"/>
+                        <xs:element name="anio_publicacion" type="xs:date"/>
+                        <xs:element name="precio" type="xs:decimal"/>
+                        <xs:element name="estanteria" type="xs:string"/>
+                    </xs:sequence>
+                    <xs:attribute name="lang" type="xs:string" use="required"/>
+                    <xs:attribute name="estado" type="xs:string" use="required"/>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="prestado"/>
+                                <xs:enumeration value="libre"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    <xs:attribute name="cover" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+</xs:schema>

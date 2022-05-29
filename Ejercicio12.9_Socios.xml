@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<socios>
+    <socio permisos="total">
+        <id_socio>MAR_1234</id_socio>
+        <nombre>María</nombre>
+        <apellido1>Sánchez</apellido1>
+        <apellido2>Ruíz</apellido2>
+        <edad>25</edad>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>GON_1234</id_socio>
+        <nombre>Gonzalo</nombre>
+        <apellido1>López</apellido1>
+        <apellido2>Casa</apellido2>
+        <edad>15</edad>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>BEN_1234</id_socio>
+        <nombre>Benito</nombre>
+        <apellido1>Pérez</apellido1>
+        <apellido2></apellido2>
+        <edad>68</edad>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>VIC_1234</id_socio>
+        <nombre>Victoria</nombre>
+        <apellido1>Montero</apellido1>
+        <apellido2>Aguilar</apellido2>
+        <edad>32</edad>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>ALE_1234</id_socio>
+        <nombre>Alejandro</nombre>
+        <apellido1>Giménez</apellido1>
+        <apellido2>Villa</apellido2>
+        <edad>27</edad>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>JOS_1234</id_socio>
+        <nombre>Jose Luis</nombre>
+        <apellido1>Cantera</apellido1>
+        <apellido2>Bota</apellido2>
+        <edad>71</edad>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>MAR_2345</id_socio>
+        <nombre>Maria Luisa</nombre>
+        <apellido1>Vega</apellido1>
+        <apellido2>Martín</apellido2>
+        <edad>58</edad>
+    </socio>    
+
+</socios>
