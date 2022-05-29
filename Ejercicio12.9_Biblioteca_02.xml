@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style_Biblioteca.xsl"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
+
+    <!-- LIBROS BIBLIOTECA -->
+    <libro lang="en" estado="libre" cover="hardcover">
+        <isbn>1982121602</isbn>
+        <titulo>Anxious People</titulo>
+        <autor>Fredrik Backman</autor>
+        <anio_publicacion>2019-04-25</anio_publicacion>
+        <precio>20.99</precio>
+        <estanteria>FIC1234**</estanteria>
+    </libro>
+    
+    <libro lang="en" estado="libre" cover="paperback">
+        <isbn>1250301696</isbn>
+        <titulo>The Silent Patient</titulo>
+        <autor>Alex Michaelides</autor>
+        <anio_publicacion>2019-02-05</anio_publicacion>
+        <precio>24.39</precio>
+        <estanteria>MIS1234**</estanteria>
+    </libro>
+    
+    <libro lang="en" estado="prestado" cover="hardcover">
+        <isbn>0399171614</isbn>
+        <titulo>The Wrath and the Dawn</titulo>
+        <autor>The Wrath and the Dawn</autor>
+        <anio_publicacion>2015-05-12</anio_publicacion>
+        <precio>22.95</precio>
+        <estanteria>FAN4567**</estanteria>
+    </libro>
+
+    <libro lang="en" estado="libre" cover="paperback">
+        <isbn>1408852594</isbn>
+        <titulo>The Assassin's Blade</titulo>
+        <autor>Sarah J. Maas</autor>
+        <anio_publicacion>2014-03-04</anio_publicacion>
+        <precio>17.99</precio>
+        <estanteria>FAN1234**</estanteria>
+    </libro>
+
+    <libro lang="en" estado="libre" cover="paperback">
+        <isbn>1442421770</isbn>
+        <titulo>The Unbecoming of Mara Dyer</titulo>
+        <autor>Michelle Hodkin</autor>
+        <anio_publicacion>2011-09-27</anio_publicacion>
+        <precio>21.99</precio>
+        <estanteria>MIS1234**</estanteria>
+    </libro>
+
+    <libro lang="es" estado="libre" cover="paperback">
+        <isbn>0393970124</isbn>
+        <titulo>Drácula</titulo>
+        <autor>Bram Stocker</autor>
+        <anio_publicacion>1897-05-26</anio_publicacion>
+        <precio>16.59</precio>
+        <estanteria>CLA1234**</estanteria>
+    </libro>
+
+    <libro lang="es" estado="libre" cover="paperback">
+        <isbn>8498675391</isbn>
+        <titulo>Los Juegos del Hambre</titulo>
+        <autor>Suzanne Collins</autor>
+        <anio_publicacion>2008-09-14</anio_publicacion>
+        <precio>23.39</precio>
+        <estanteria>FIC1234**</estanteria>
+    </libro>
+
+
+    <!-- SOCIOS BIBLIOTECA --> 
+        <!-- En esta biblioteca algunos socios no tienen apellido2 y algunos 
+        tampoco tienen telefono y/o email, cosa que está permitido usando 
+        el mismo esquema XSD --> 
+    <socio permisos="total">
+        <id_socio>MIR_1234</id_socio>
+        <nombre>Miriam</nombre>
+        <apellido1>Sánchez</apellido1>
+        <edad>27</edad>
+        <telefono cod_pais="+34">689451658</telefono>
+        <email>miriam_95@gmail.com</email>
+        <suscripcion>
+            <afiliado/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="moroso">
+        <id_socio>GAS_1234</id_socio>
+        <nombre>Gastón</nombre>
+        <apellido1>Lordosa</apellido1>
+        <apellido2>Costa</apellido2>
+        <edad>19</edad>
+        <telefono cod_pais="+33">694152479</telefono>
+        <email>gaston-lc@hotmail.com</email>
+        <suscripcion>
+            <afiliado/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>BEN_1234</id_socio>
+        <nombre>Victor</nombre>
+        <apellido1>Pérez</apellido1>
+        <edad>67</edad>
+        <telefono cod_pais="+34">603148622</telefono>
+        <suscripcion>
+            <afiliadoVIP/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>VIC_1234</id_socio>
+        <nombre>Valentina</nombre>
+        <apellido1>Mora</apellido1>
+        <apellido2>Canto</apellido2>
+        <edad>32</edad>
+        <telefono cod_pais="+34">621479630</telefono>
+        <email>val-90@webservices.net</email>
+        <suscripcion>
+            <afiliadoVIP/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>ALE_1234</id_socio>
+        <nombre>Roberto</nombre>
+        <apellido1>Gómez</apellido1>
+        <apellido2>Ventas</apellido2>
+        <edad>27</edad>
+        <telefono cod_pais="+34">652014879</telefono>
+        <email>roberto_gometas@gmail.com</email>
+        <suscripcion>
+            <afiliado/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>JOS_1234</id_socio>
+        <nombre>Javier</nombre>
+        <apellido1>Segovia</apellido1>
+        <edad>73</edad>
+        <suscripcion>
+            <afiliado/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>MAR_2345</id_socio>
+        <nombre>Maria Esther</nombre>
+        <apellido1>Valdivielso</apellido1>
+        <apellido2>Martín</apellido2>
+        <edad>48</edad>
+        <telefono cod_pais="+34">698522124</telefono>
+        <email>mari48@hotmail.com</email>
+        <suscripcion>
+            <empleado/>
+        </suscripcion>
+    </socio> 
+
+</biblioteca>

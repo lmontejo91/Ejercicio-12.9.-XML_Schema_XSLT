@@ -5,10 +5,13 @@
     <xs:complexType>
         <xs:sequence>
             <xs:element name="libro" minOccurs="5" maxOccurs="unbounded" type="estructura_libro"/>
+            <xs:element name="socio" minOccurs="1" maxOccurs="unbounded" type="estructura_socio"/>
         </xs:sequence>
     </xs:complexType>
 </xs:element>
 
+
+<!-- ESTRUCTURA LIBROS -->
 <xs:complexType name="estructura_libro">
     <xs:sequence>
         <xs:element name="isbn" type="tipo_isbn"/>
@@ -18,7 +21,15 @@
         <xs:element name="precio" type="tipo_precio"/>
         <xs:element name="estanteria" type="tipo_estanteria"/>
     </xs:sequence>
-    <xs:attribute name="lang" type="xs:string" use="required"/>
+
+    <xs:attribute name="lang" use="required">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="es|en"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
     <xs:attribute name="estado" use="required">
         <xs:simpleType>
             <xs:restriction base="xs:string">
@@ -27,7 +38,15 @@
             </xs:restriction>
         </xs:simpleType>
     </xs:attribute>
-    <xs:attribute name="cover" type="xs:string"/>  
+
+    <xs:attribute name="cover">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="paperback|hardcover"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
 </xs:complexType>
 
 <xs:simpleType name="tipo_isbn">
@@ -51,8 +70,86 @@
 
 <xs:simpleType name="tipo_estanteria">
     <xs:restriction base="xs:string">
-        <xs:pattern value="HIS|ROM|FIC|FAN|CLA|MIS[0-9]{4}"/>
+        <xs:pattern value="(HIS|ROM|FIC|FAN|CLA|MIS){1}[0-9]{4}[/\W]+"/>
     </xs:restriction>
 </xs:simpleType>
+
+
+<!-- ESTRUCTURA SOCIOS -->
+<xs:complexType name="estructura_socio">
+    <xs:sequence>
+        <xs:element name="id_socio" type="tipo_id"/>
+        <xs:element name="nombre" type="tipo_nombre"/>
+        <xs:element name="apellido1" type="tipo_apellido"/>
+        <xs:element name="apellido2" type="tipo_apellido" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="edad" type="tipo_edad"/>
+        <xs:element name="telefono" type="tipo_telefono" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="email" type="tipo_email" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="suscripcion" type="tipo_suscripcion"/>
+    </xs:sequence>
+
+    <xs:attribute name="permisos" use="required">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="total"/>
+                <xs:enumeration value="moroso"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+ 
+</xs:complexType>
+
+<xs:simpleType name="tipo_id">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Z]{3}_[0-9]{4}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipo_nombre">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Za-zÀ-ÿ]+(\s[A-Za-zÀ-ÿ]+)?"/> <!-- El segundo bloque es opcional por lo que el nombre está limitado a un nombre simple o compuesto pero sólo dos nombres con un espacio entre ellos (no más de dos) -->
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipo_apellido">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Za-zÀ-ÿ]+"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipo_edad">
+    <xs:restriction base="xs:integer">
+        <xs:minInclusive value="12"/>
+        <xs:maxInclusive value="110"/>
+    </xs:restriction>
+</xs:simpleType>
+   
+<xs:complexType name="tipo_telefono">
+    <xs:simpleContent>
+        <xs:extension base="restriccion_telefono">
+            <xs:attribute name="cod_pais" type="xs:string" default="+34"/>
+        </xs:extension>      
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="restriccion_telefono"> 
+        <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{9}"/>
+        </xs:restriction>      
+</xs:simpleType>
+
+<xs:simpleType name="tipo_email">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9a-z_\-\.]+@{1}[a-z]+\.[a-z]{2,}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="tipo_suscripcion">
+    <xs:choice>
+        <xs:element name="afiliado"/>
+        <xs:element name="afiliadoVIP"/> 
+        <xs:element name="empleado"/>      
+    </xs:choice>
+</xs:complexType>
 
 </xs:schema>

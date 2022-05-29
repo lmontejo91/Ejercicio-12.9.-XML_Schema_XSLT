@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style_Biblioteca.xsl"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="schemaBiblioteca.xsd">
+
+    <!-- LIBROS BIBLIOTECA -->
+    <libro lang="es" estado="libre" cover="hardcover">
+        <isbn>8478886540</isbn>
+        <titulo>Harry Potter y la piedra filosofal</titulo>
+        <autor>J. K. Rowling</autor>
+        <anio_publicacion>1997-06-26</anio_publicacion>
+        <precio>29.99</precio>
+        <estanteria>FAN1234**</estanteria>
+    </libro>
+    
+    <libro lang="en" estado="libre" cover="paperback">
+        <isbn>1501110365</isbn>
+        <titulo>It Ends with Us</titulo>
+        <autor>Colleen Hoover</autor>
+        <anio_publicacion>2016-08-02</anio_publicacion>
+        <precio>19.99</precio>
+        <estanteria>ROM1234**</estanteria>
+    </libro>
+    
+    <libro lang="en" estado="prestado" cover="hardcover">
+        <isbn>0765326353</isbn>
+        <titulo>The Way of Kings</titulo>
+        <autor>Brandon Sanderson</autor>
+        <anio_publicacion>2010-08-31</anio_publicacion>
+        <precio>39.95</precio>
+        <estanteria>FAN4567**</estanteria>
+    </libro>
+
+    <libro lang="es" estado="libre" cover="paperback">
+        <isbn>8423648990</isbn>
+        <titulo>Marina</titulo>
+        <autor>Carlos Ruiz Zafón</autor>
+        <anio_publicacion>1999-03-25</anio_publicacion>
+        <precio>22.99</precio>
+        <estanteria>FIC1234**</estanteria>
+    </libro>
+
+    <libro lang="es" estado="libre" cover="paperback">
+        <isbn>8497594258</isbn>
+        <titulo>Un mundo feliz</titulo>
+        <autor>Aldous Huxley</autor>
+        <anio_publicacion>1932-01-07</anio_publicacion>
+        <precio>29.99</precio>
+        <estanteria>FAN1234**</estanteria>
+    </libro>
+
+    <libro lang="es" estado="libre" cover="paperback">
+        <isbn>9876780042</isbn>
+        <titulo>Cumbres Borrascosas</titulo>
+        <autor>Emily Brontë</autor>
+        <anio_publicacion>1847-04-26</anio_publicacion>
+        <precio>21.39</precio>
+        <estanteria>CLA1234**</estanteria>
+    </libro>
+
+    <libro lang="es" estado="libre" cover="paperback">
+        <isbn>0553213105</isbn>
+        <titulo>Orgullo y prejuicio</titulo>
+        <autor>Jane Austen</autor>
+        <anio_publicacion>1813-03-13</anio_publicacion>
+        <precio>20.39</precio>
+        <estanteria>CLA1234**</estanteria>
+    </libro>
+
+
+    <!-- SOCIOS BIBLIOTECA -->
+    <socio permisos="total">
+        <id_socio>MAR_1234</id_socio>
+        <nombre>María</nombre>
+        <apellido1>Sánchez</apellido1>
+        <apellido2>Ruíz</apellido2>
+        <edad>25</edad>
+        <telefono cod_pais="+34">689451658</telefono>
+        <email>maria_97@gmail.com</email>
+        <suscripcion>
+            <afiliado/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="moroso">
+        <id_socio>GON_1234</id_socio>
+        <nombre>Gonzalo</nombre>
+        <apellido1>López</apellido1>
+        <apellido2>Casa</apellido2>
+        <edad>15</edad>
+        <telefono cod_pais="+34">694152479</telefono>
+        <email>gonzalo-lc@hotmail.com</email>
+        <suscripcion>
+            <afiliado/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>BEN_1234</id_socio>
+        <nombre>Benito</nombre>
+        <apellido1>Pérez</apellido1>
+        <apellido2>Goma</apellido2>
+        <edad>68</edad>
+        <telefono cod_pais="+34">603148622</telefono>
+        <suscripcion>
+            <afiliadoVIP/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>VIC_1234</id_socio>
+        <nombre>Victoria</nombre>
+        <apellido1>Montero</apellido1>
+        <apellido2>Aguilar</apellido2>
+        <edad>32</edad>
+        <telefono cod_pais="+34">621479630</telefono>
+        <email>victoria-90@webservices.net</email>
+        <suscripcion>
+            <afiliadoVIP/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>ALE_1234</id_socio>
+        <nombre>Alejandro</nombre>
+        <apellido1>Giménez</apellido1>
+        <apellido2>Villa</apellido2>
+        <edad>27</edad>
+        <telefono cod_pais="+34">652014879</telefono>
+        <email>alex_gime@gmail.com</email>
+        <suscripcion>
+            <afiliado/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>JOS_1234</id_socio>
+        <nombre>Jose Luis</nombre>
+        <apellido1>Cantera</apellido1>
+        <apellido2>Bota</apellido2>
+        <edad>71</edad>
+        <telefono cod_pais="+34">648261495</telefono>
+        <suscripcion>
+            <afiliado/>
+        </suscripcion>
+    </socio>
+
+    <socio permisos="total">
+        <id_socio>MAR_2345</id_socio>
+        <nombre>Maria Luisa</nombre>
+        <apellido1>Vega</apellido1>
+        <apellido2>Martín</apellido2>
+        <edad>58</edad>
+        <telefono cod_pais="+44">698522124</telefono>
+        <email>mari58@hotmail.com</email>
+        <suscripcion>
+            <empleado/>
+        </suscripcion>
+    </socio> 
+
+</biblioteca>
